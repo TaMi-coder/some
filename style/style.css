@@ -1,0 +1,501 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.clearfix {
+  content: "";
+  clear: both;
+  display: block;
+}
+label {
+  cursor: pointer;
+}
+.wrapper {
+  background-color: aqua;
+  margin: 0 auto;
+  width: 1200px;
+  text-align: center;
+}
+.element_wrapper {
+  padding: 50px;
+  display: inline-block;
+}
+.element_wrapper_wrench {
+  padding: 50px;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+.screw {
+  position: relative;
+  height: 100px;
+  width: 400px;
+  margin: 50px 100px;
+  background-color: rgb(185, 181, 181);
+}
+.screw:before {
+  position: absolute;
+  content: "";
+  height: 200px;
+  width: 100px;
+  top: 50%;
+  margin-top: -100px;
+  left: -50px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  background: linear-gradient(
+    rgb(185, 181, 181) 45%,
+    transparent 45%,
+    transparent 55%,
+    rgb(185, 181, 181) 55%
+  );
+}
+.screw:after {
+  position: absolute;
+  content: "";
+  height: 100px;
+  width: 300px;
+  top: 0;
+  right: 0;
+  background: repeating-linear-gradient(
+    to top left,
+    rgb(118, 118, 122) 30px,
+    rgb(185, 181, 181) 60px
+  );
+}
+.wrench {
+  position: relative;
+  height: 100px;
+  width: 350px;
+  margin: 100px 50px 100px 250px;
+  background-color: rgb(185, 181, 181);
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  background: radial-gradient(
+    circle closest-side at 300px 50px,
+    transparent 50%,
+    rgb(185, 181, 181) 50%
+  );
+}
+.wrench:before {
+  position: absolute;
+  content: "";
+  height: 150px;
+  width: 200px;
+  border-radius: 50%;
+  top: 50%;
+  margin-top: -150px;
+  left: -250px;
+  border-top: 70px solid rgb(185, 181, 181);
+  border-bottom: 70px solid rgb(185, 181, 181);
+  border-right: 50px solid rgb(185, 181, 181);
+  border-left: 10px solid transparent;
+}
+.nut {
+  position: relative;
+  margin: 50px;
+  height: 100px;
+  width: 200px;
+  background-color: rgb(185, 181, 181);
+  background: radial-gradient(circle, transparent 30%, rgb(185, 181, 181) 30%);
+}
+.nut:after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: 0;
+  width: 200px;
+  box-sizing: border-box;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-top: 50px solid rgb(185, 181, 181);
+}
+.nut:before {
+  position: absolute;
+  content: "";
+  bottom: 100%;
+  left: 0;
+  width: 200px;
+  box-sizing: border-box;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-bottom: 50px solid rgb(185, 181, 181);
+}
+.scena {
+  position: relative;
+  margin: 0 0 0 auto;
+  text-align: center;
+  padding: 100px 0 50px 50px;
+  background: linear-gradient(darkslateblue 50%, blue 50%);
+  animation: sky 15s;
+}
+.sun {
+  position: absolute;
+  left: -250px;
+  bottom: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: yellow;
+  box-shadow: 0 0 10px 10px rgb(175, 175, 98);
+  animation: sun 15s;
+}
+@keyframes sun {
+  50% {
+    left: 60%;
+    bottom: 80%;
+    animation-timing-function: ease-out;
+  }
+  100% {
+    left: 110%;
+    bottom: 50%;
+    animation-timing-function: ease;
+  }
+}
+@keyframes sky {
+  0% {
+    background: linear-gradient(rgb(101, 81, 236) 50%, blue 50%);
+  }
+  30% {
+    background: linear-gradient(rgb(67, 165, 204) 50%, blue 50%);
+  }
+  50% {
+    background: linear-gradient(skyblue 50%, blue 50%);
+  }
+  85% {
+    background: linear-gradient(rgb(101, 81, 236) 50%, blue 50%);
+  }
+  100% {
+    background: linear-gradient(darkslateblue 50%, blue 50%);
+  }
+}
+.moon {
+  position: absolute;
+  left: -200px;
+  bottom: 50%;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  box-shadow: 15px 15px 0 0 yellow;
+  animation: moon 10s;
+  animation-delay: 15s;
+}
+@keyframes moon {
+  50% {
+    left: 60%;
+    bottom: 80%;
+    animation-timing-function: ease-in;
+  }
+  100% {
+    left: 100%;
+    bottom: 50%;
+    animation-timing-function: linear;
+  }
+}
+.star {
+  position: absolute;
+  border-radius: 50%;
+  width: 1px;
+  height: 1px;
+  background-color: yellow;
+  box-shadow: 0 0 10px 5px yellow;
+}
+.star_1 {
+  top: 30px;
+  left: 30%;
+}
+.star_2 {
+  top: 50px;
+  left: 60%;
+}
+.star_3 {
+  top: 80px;
+  left: 10%;
+}
+.stern {
+  position: relative;
+  box-sizing: border-box;
+  width: 500px;
+  height: 200px;
+  padding: 25px 75px 25px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(182, 82, 82);
+  margin: 500px auto 100px auto;
+  animation-name: move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  transform: rotate(5deg);
+}
+@keyframes move {
+  from {
+    transform: rotate(-5deg);
+    animation-timing-function: linear;
+  }
+  to {
+    transform: rotate(5deg);
+    animation-timing-function: linear;
+  }
+}
+.stern:before {
+  position: absolute;
+  box-sizing: border-box;
+  content: "";
+  right: 100%;
+  bottom: 0;
+  height: 300px;
+  border-right: 150px solid rgb(182, 82, 82);
+  border-top: 150px solid transparent;
+  border-bottom: 150px solid transparent;
+}
+.stern:after {
+  position: absolute;
+  content: "";
+  right: -300px;
+  bottom: 0;
+  width: 300px;
+  height: 100px;
+  transform-origin: 0 bottom;
+  transform: rotate(-60deg);
+  z-index: 5;
+  background-color: rgb(182, 82, 82);
+}
+
+.window {
+  position: relative;
+  box-sizing: border-box;
+  flex: 0 0 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-color: aqua;
+  z-index: 10;
+  transform: rotate(0deg);
+  animation-name: paddles;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  transform: rotate(10deg);
+}
+@keyframes paddles {
+  from {
+    transform: rotate(-10deg);
+    animation-timing-function: linear;
+  }
+  to {
+    transform: rotate(10deg);
+    animation-timing-function: linear;
+  }
+}
+.window:before {
+  position: absolute;
+  content: "";
+  width: 200px;
+  height: 15px;
+  top: 50%;
+  left: 50%;
+  border-top-left-radius: 40%;
+  border-bottom-left-radius: 40%;
+  background-color: burlywood;
+  transform-origin: 0 top;
+  transform: rotate(45deg);
+}
+.window:after {
+  position: absolute;
+  content: "";
+  width: 75px;
+  height: 75px;
+  top: 180px;
+  left: 115px;
+  background-color: burlywood;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform-origin: 0 top;
+  transform: rotate(-45deg);
+}
+
+.mast {
+  position: absolute;
+  height: 500px;
+  width: 20px;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -10px;
+  background-color: burlywood;
+}
+.flag {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 50px;
+  height: 80px;
+  background-color: cornflowerblue;
+}
+.flag:before {
+  position: absolute;
+  content: "";
+  box-sizing: border-box;
+  top: 0;
+  left: 100%;
+  height: 40px;
+  border-right: 40px solid transparent;
+  border-top: 40px solid cornflowerblue;
+  border-bottom: 40px solid cornflowerblue;
+}
+.sail_1 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -210px;
+  height: 500px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: transparent;
+  border-left: 120px solid green;
+}
+.sail_2 {
+  position: absolute;
+  top: 50px;
+  left: -100px;
+  height: 420px;
+  width: 200px;
+  overflow: hidden;
+  background: radial-gradient(
+    ellipse at -140px -200px,
+    transparent 77%,
+    green 77%
+  );
+  transform: rotate(-29deg);
+}
+h2 {
+  font-size: 30px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: black;
+  background-color: lightskyblue;
+  text-align: center;
+  padding: 15px 0;
+}
+.menu {
+  margin: 100px auto 0;
+}
